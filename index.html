@@ -1,10 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documents</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <meta name="author" content="Alvin Chino" >
+    <meta 
+        name="description"
+        content="Alvin Alcides Chino Mamani WDD 131 - Dynamic Web Fundamentals
+        we will show our knowledge in HTML and CSS in the design and development 
+        of a home page also we will apply concepts learned this week including JavaScript">
+    <title>WDD 131: Dynamic Web Fundamentals - Alvin Chino</title>
 </head>
 <body>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Alvin Chino</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/alvin-alcides-mamani-4407ba230/">LinkedIn</a>
+            <a href="https://byui.instructure.com/.">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/33?lang=spa">Scripture</a>
+            <a href="">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card about-me">
+            <h2>About Me</h2>
+            <div class="content">
+                <p>My name is Alvin. I was born in Bolivia and live with my family in La Paz. I am currently a student at local university. I have a few hobbies like play volleybal listen music or sleep.</p>
+                <img src="images/alvin-profile.jpg" alt="Alvin Chino profile picture">
+            </div>
+            <div class="location">
+                <h3>La Paz, Bolivia</h3>
+                <img src="images/bandera-bolivia.jpg" alt="bandera-bolivia" class="flag">
+                <p>Bolivia is a landlocked country located in central South America. It is known for its diverse landscape, including the part of the Andes Mountains, and the Salar Uyuni . Bolivia is known as the worst team in sudamerica soccer. </p>
+            </div>
+        </section>
+      
+        <section class="card resources">
+            <h2>Usefull Pages</h2>
+            <ul>
+                <li><a href="https://www.churchofjesuschrist.org/?lang=spa">Faith</a></li>
+                <li><a href="https://github.com/alvinchm"> My GitHub</a></li>
+                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/">Udemy</a></li>
+                <li><a href="https://coolors.co/">Coolors</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Alvin Alcides Chino, Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

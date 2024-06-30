@@ -1,0 +1,151 @@
+/* Base styles and typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    
+}
+h2 {
+    background-color: #1a4a6d;
+    padding: 1rem;
+    color: #f4f4f4;
+}
+
+header {
+    background-color: #1a4a6d;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background-color: #0a2747;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #071d35;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.about-me {
+    flex: 2;
+    text-align: center;
+    
+}
+
+.resources {
+    flex: 1;
+    text-align: center;
+}
+
+.about-me .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+
+    
+}
+
+.about-me .content p {
+    flex: 1;
+    margin-right: 1rem;
+    
+}
+
+.about-me .content img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.location {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.location h3 {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.location .flag {
+    width: 100px;
+    margin-right: 1rem;
+}
+
+.location p {
+    flex: 1;
+}
+
+.resources ul {
+    list-style-type:disc ;
+    padding: 0;
+
+}
+
+.resources li {
+    margin-bottom: 0.5rem;
+}
+.resources a {
+    color: #2165f8;
+    text-decoration: none;
+
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+footer {
+    background-color: #1a4a6d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+p {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem 0.75rem;
+}
+
+#lastModified {
+	color: yellowgreen;
+	font-weight: 700;
+	font-family: hebrew;
+}
