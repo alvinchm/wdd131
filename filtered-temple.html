@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Album of temples</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="filtered-temple.css">
+    <link rel="stylesheet" href="temples-large-filtered.css">
+    <script src="temples-filtered.js" defer></script>
+    <meta name="author" content="Alvin Chino" >
+    <meta 
+        name="description"
+        content="Alvin Alcides Chino Mamani WDD 131 - Dynamic Web Fundamentals
+        we will show our knowledge in HTML and CSS in the design and development 
+        of a home page also we will apply concepts learned this week including JavaScript">
+
+</head>
+<body>
+    <header>
+        <h1>Temples</h1>
+        <button id="listOptions" aria-label="Toggle Menu" aria-expanded="false">
+            <span>&#9776;</span>
+            <span>X</span>
+        </button>
+        <nav>
+            <ul id="primaryNav">
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="templeListTitle">All Temples</h2>
+        <div id="temples-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Alvin Alcides Chino, Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

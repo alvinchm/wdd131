@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Lora', serif;
+}
+
+header {
+    background-color: #87BBA2;
+    color: #053225;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li {
+    margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+    color: #053225;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #09644a;
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    color: #053225;
+}
+
+#temples-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.temple-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.temple-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.temple-card h3 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #87BBA2;
+    color: #053225;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+#listOptions {
+    display: none;
+    background: black;
+    border: none;
+    color: #053225;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+#listOptions span:nth-child(1) {
+    display: block;
+}
+
+#listOptions span:nth-child(2) {
+    display: none;
+}
+
+#listOptions.open span:nth-child(1) {
+    display: none;
+}
+
+#listOptions.open span:nth-child(2) {
+    display: block;
+}
+#primaryNav a.active {
+    background-color: #09644a;
+    color: white;
+}
+@media screen and (max-width: 767px) {
+    #listOptions {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+}
