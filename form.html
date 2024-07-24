@@ -7,18 +7,24 @@
     <title>Product Review Form</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/scripts.js"></script>
+    <meta name="author" content="Alvin Chino" >
+    <meta 
+        name="description"
+        content="Alvin Alcides Chino Mamani WDD 131 - Dynamic Web Fundamentals
+        we will show our knowledge in HTML and CSS in the design and development 
+        of a home page also we will apply concepts learned this week including JavaScript">
+
 </head>
 <body>
     <main>
         <div class="headding" >
-            <h1>Review-Form</h1>
+            <h1>Product Review</h1>
         </div>
         <form action="review.html" method="get">
             <div class="form-group">
                 <label for="product">Product Name:</label>
                 <select id="product" name="product" required>
-                    <option value="" disabled selected>Select a Product ...</option>
-                    <!-- Options will be populated by JavaScript -->
+                    <option value="" disabled selected>Select a Product</option>
                 </select>
             </div>
 
@@ -58,12 +64,12 @@
             </div>
 
             <div class="form-group">
-                <label for="review">Written Review:</label>
+                <label for="review">Written Review:(optional)</label>
                 <textarea id="review" name="review" rows="4"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="userName">User Name:</label>
+                <label for="userName">User Name:(optional)</label>
                 <input type="text" id="userName" name="userName">
             </div>
 
@@ -77,7 +83,5 @@
         <p>&copy; <span id="currentyear"></span> Alvin Alcides Chino, Bolivia</p>
         <p id="lastModified"></p>
     </footer>
-
-
 </body>
 </html>

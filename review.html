@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Submitted</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="author" content="Alvin Chino" >
+    <meta 
+        name="description"
+        content="Alvin Alcides Chino Mamani WDD 131 - Dynamic Web Fundamentals
+        we will show our knowledge in HTML and CSS in the design and development 
+        of a home page also we will apply concepts learned this week including JavaScript">
+
 </head>
 <body>
     <main>
@@ -13,10 +20,10 @@
         <p>Total reviews submitted: <span id="reviewCount"></span></p>
     </main>
 
-    <footer>
-        <!-- Common footer content -->
-        <p>&copy; 2023 Product Review Form. All rights reserved.</p>
-    </footer>
+</body>
+<footer>
+    <p>&copy; <span id="currentyear"></span> Alvin Alcides Chino, Bolivia</p>
+    <p id="lastModified"></p>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -25,6 +32,17 @@
             localStorage.setItem('reviewCount', count);
             document.getElementById('reviewCount').textContent = count;
         });
+        function setCurrentYear() {
+             const currentYear = new Date().getFullYear();
+             document.getElementById('currentyear').textContent = currentYear;
+            }
+            function setLastModified() {
+                document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                setCurrentYear();
+                setLastModified();
+            });
     </script>
 </body>
 <footer>

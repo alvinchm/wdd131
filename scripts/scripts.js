@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const products = [
         {
@@ -30,18 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const productSelect = document.getElementById('product');
 
-    // Add the initial disabled option
+
     const defaultOption = document.createElement('option');
     defaultOption.value = "";
-    defaultOption.textContent = "Select a Product ...";
+    defaultOption.textContent = "Select a Product ";
     defaultOption.disabled = true;
     defaultOption.selected = true;
     productSelect.appendChild(defaultOption);
 
-    // Populate the select element with product options
     products.forEach(product => {
         const option = document.createElement('option');
-        option.value = product.id;  // Using id as the value
+        option.value = product.id;  
         option.textContent = product.name;
         productSelect.appendChild(option);
     });
