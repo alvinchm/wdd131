@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <title>Popular Places</title>
+
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="project-large.css">
+    <script src="script.js" defer></script>
+    <meta name="author" content="Alvin Chino" >
+    <meta 
+        name="description"
+        content="Alvin Alcides Chino Mamani WDD 131 - Dynamic Web Fundamentals
+        Popular tourist sites with like system and filtering but is just for enjoy the view">
+
+</head>
+<body>
+    <header>
+        <h1>Places</h1>
+        <button id="listOptions" aria-label="Toggle Menu" aria-expanded="false">
+            <span>&#9776;</span>
+            <span>X</span>
+        </button>
+        <nav>
+            <ul id="primaryNav">
+                <li><a href="#" id="allPlaces">All</a></li>
+                <li><a href="#" id="favorites">Favorites</a></li>
+                <li><a href="#" id="mostVisited">Most Visited</a></li>
+                <li><a href="#" id="leastVisited">Least Visited</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="siteListTitle">All Places</h2>
+        <div id="sites-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Alvin Alcides Chino, Bolivia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
