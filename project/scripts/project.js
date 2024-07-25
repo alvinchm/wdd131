@@ -111,8 +111,9 @@ function createSiteCard(site) {
     return `
       <article class="site-card">
         <h3>${site.name}</h3>
-        <img src="${site.imageUrl}" alt="${site.name}" loading="lazy">
+        <img src="images/placeholder-image.jpg" data-src="${site.imageUrl}" alt="${site.name}" loading="lazy" class="lazy-image">
         <p>Location: ${site.location}</p>
+        <p>${site.description}</p>
         <button class="like-button" data-site="${site.name}">
           Like (${site.likes})
         </button>
@@ -121,11 +122,22 @@ function createSiteCard(site) {
     `;
 }
 
-function displaySites(siteList) {
-    const sitesContainer = document.getElementById('sites-container');
-    sitesContainer.innerHTML = siteList.map(createSiteCard).join('');
-    setupLikeButtons();
+function lazyLoad() {
+    const lazyImages = document.querySelectorAll('img.lazy-image');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                image.src = image.dataset.src;
+                image.classList.remove('lazy-image');
+                imageObserver.unobserve(image);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => imageObserver.observe(img));
 }
+
 
 function setupLikeButtons() {
     document.querySelectorAll('.like-button').forEach(button => {
@@ -192,6 +204,7 @@ function displaySites(siteList) {
     } else {
         sitesContainer.innerHTML = siteList.map(createSiteCard).join('');
         setupLikeButtons();
+        lazyLoad();
     }
 }
 function updateFooter() {
@@ -206,4 +219,5 @@ document.addEventListener('DOMContentLoaded', () => {
     updateFooter();
     setupMobileMenu();
     setupNavigation();
+    lazyLoad();
 });
